@@ -7,8 +7,8 @@ import "./App.css";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to={`/rooms/${uuidV4()}`} />} />
       <Route path="/rooms/:id" element={<TextEditor />} />
+      <Route path="/" element={<Navigate to={`/rooms/${uuidV4()}`} />} />
     </Routes>
   );
 }
