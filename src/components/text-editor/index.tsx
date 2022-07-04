@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import Quill from "quill";
 import { io, Socket } from "socket.io-client";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 import "quill/dist/quill.snow.css";
 import "./styles.css";
 
@@ -97,7 +98,7 @@ export default function TextEditor() {
       wrapper: HTMLDivElement
     ): React.LegacyRef<HTMLDivElement> | null | undefined => {
       if (!wrapper) return;
-      wrapper.innerHTML = "";
+      wrapper.innerText = "";
 
       const editor = document.createElement("div");
       wrapper.append(editor);
@@ -112,6 +113,33 @@ export default function TextEditor() {
     },
     []
   );
+
+  //useEffect for creating share button
+  useEffect(() => {
+    const button = document.createElement("button");
+    button.innerText = "Share";
+    button.style.backgroundColor = "rgb(68,110,208)";
+    button.style.fontFamily = "'Source Sans Pro', sans-serif";
+    button.style.padding = "6px 10px";
+    button.style.height = "auto";
+    button.style.width = "auto";
+    button.style.color = "#fff";
+    button.style.fontSize = "15px";
+    button.addEventListener("click", copyDocumentLink);
+
+    const toolbar = document.querySelector(".ql-toolbar");
+    toolbar?.append(button);
+  }, [wrapperRef]);
+
+  //function for copying Room url to clipboard.
+  const copyDocumentLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    Swal.fire(
+      "Congratulations!",
+      "The link of your Room has been copied!!",
+      "success"
+    );
+  };
 
   return <div className="container" ref={wrapperRef}></div>;
 }
