@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Doc Share
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Doc Share is a web application that offers all the functionalities of a word editor. Its standout feature is the document-sharing functionality, which enables multiple users to collaborate and work together on a single document. The frontend of the application is built using React, the Quill Text Editor library, and Socket.IO (web sockets), while the backend is developed using Node.js and Express.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started with the Online Text Editor application, follow the instructions below:
 
-### `yarn dev`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js (version >= 16)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `yarn test`
+1. Clone the repository to your local machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/jatinkh25/doc_share_frontend
+   ```
 
-### `yarn build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd doc_share_frontend
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install the dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   yarn install
+   ```
 
-### `yarn eject`
+### Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm dev
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Open your browser and visit `http://localhost:3000` to access the Online Text Editor web application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Features
 
-## Learn More
+The Online Text Editor web application offers the following features:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Word Editor Functionalities**: The application provides a rich set of word editor functionalities, including text formatting (bold, italic, underline), text alignment, lists (bulleted and numbered), font selection, and more.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Document Sharing**: Multiple users can collaborate and work together on a single document in real-time. Any changes made by one user will be instantly reflected on the screens of all other users working on the same document.
 
-### Code Splitting
+3. **Real-Time Collaboration**: The application utilizes web sockets (Socket.IO) to enable real-time collaboration. Users can see each other's cursor positions and selections, allowing for seamless collaboration and coordination.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies
 
-### Analyzing the Bundle Size
+The Online Text Editor web application is built using the following technologies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React: A JavaScript library for building user interfaces.
+- Quill Text Editor: A powerful, extensible, and customizable rich text editor for the web.
+- Socket.IO: A library that enables real-time, bidirectional communication between web clients and servers using web sockets.
+- Node.js: A JavaScript runtime environment that allows running JavaScript on the server side.
+- Express: A minimal and flexible Node.js web application framework for building robust APIs and web applications.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions to the Online Text Editor web application are welcome. If you want to contribute, please follow the guidelines outlined in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The Online Text Editor web application is open source and is available under the [MIT License](LICENSE). Feel free to modify and use the code according to your needs.
